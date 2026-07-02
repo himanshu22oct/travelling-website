@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travelling website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+        <body>
+            <div class="navimg">
+                <nav class="navbar">
+                    <div class="left">
+                        <img src="logo.png" alt="logo...." class="im">
+                        <input type="search" placeholder="search">
+                        <button class="but"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="right">
+                        <ul class="iteams">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="item.html">ITEAMS</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="facility">
+                <ul class="facility">
+                    <li><a href="flight.html">FLIGHT   <i class="fa-solid fa-plane"></i>  </a></i></li>
+                    <li><a href="cab.html">CABS    <i class="fa-solid fa-taxi"></i>   </a></li>
+                    <li><a href="bus.html">BUSES    <i class="fa-solid fa-bus"></i>   </a></li>
+                    <li><a href="train.html">TRAIN   <i class="fa-solid fa-train-tram"></i></a></li>
+                    <li><a href="homstay.html">HOME STAY <i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="villa.html">VILLAS  <i class="fa-solid fa-bed"></i></a></li>
+                    <li><a href="hotel.html">HOTELS  <i class="fa-solid fa-hotel"></i></a></li>
+                    <li><a href="holidays.html">HOLIDAY PACKAGE  <i class="fa-solid fa-gift"></i></a></li>
+                </ul>
+            </div>
+    <section class="flight-booking">
+        <p class="para">Search for Buses</p>
+        <form id="flightSearchForm">
+            <label for="from">From:</label>
+            <select id="from" required>
+                <option value="">Select Departure City</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+            </select>
+
+            <label for="to">To:</label>
+            <select id="to" required>
+                <option value="">Select Destination City</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+            </select>
+
+            <label for="departure">Departure Date:</label>
+            <input type="date" id="departure" required>
+
+            <label for="passengers">Passengers:</label>
+            <input type="number" id="passengers" min="1" value="1" required>
+
+            <button type="submit">Search Buses</button>
+        </form>
+    </section>
+
+   
+    <section id="flightResults">
+        <p class="para">Available Buses</p>
+        <ul id="flightsList"></ul>
+    </section>
+
+    
+    <section id="bookingSection" style="display: none;">
+        <p class="para">Complete Your Booking</p>
+        <p id="totalAmount"></p>
+        <form id="bookingForm">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" required>
+                <option value="">Select Payment Method</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+                <option value="UPI">UPI</option>
+                <option value="Net Banking">Net Banking</option>
+            </select>
+
+            
+            <div id="cardDetails" style="display: none;">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="Enter Card Number">
+
+                <label for="cardExpiry">Expiry Date:</label>
+                <input type="month" id="cardExpiry">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="123">
+            </div>
+
+            
+            <div id="upiDetails" style="display: none;">
+                <label for="upiID">UPI ID:</label>
+                <input type="text" id="upiID" placeholder="example@upi">
+            </div>
+
+           
+            <div id="netBankingDetails" style="display: none;">
+                <label for="bankName">Select Bank:</label>
+                <select id="bankName">
+                    <option value="">Choose Bank</option>
+                    <option value="SBI">State Bank of India</option>
+                    <option value="HDFC">HDFC Bank</option>
+                    <option value="ICICI">ICICI Bank</option>
+                    <option value="Axis">Axis Bank</option>
+                </select>
+            </div>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+        <p id="bookingMessage"></p>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2025 Travel Explorer. Discover Your Next Adventure!</p>
+        <p>Contact us: support@travelexplorer.com | Phone: +123 456 7890</p>
+    </footer>
+
+    <script>
+        
+        document.getElementById("flightSearchForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const from = document.getElementById("from").value;
+            const to = document.getElementById("to").value;
+            const departure = document.getElementById("departure").value;
+            const passengers = document.getElementById("passengers").value;
+
+            if (!from || !to || !departure || passengers <= 0) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            const ticketPrice = generateTicketPrice();
+            const totalPrice = ticketPrice * passengers;
+
+            const flightResults = document.getElementById("flightsList");
+            flightResults.innerHTML = `
+                <li>
+                    <strong>Bus Details:</strong> ${from} to ${to} on ${departure} for ${passengers} passenger(s). <br>
+                    <strong>Ticket Price:</strong> ₹${ticketPrice} per person <br>
+                    <strong>Total Price:</strong> ₹${totalPrice} <br>
+                    <button onclick="showBooking(${totalPrice})">Proceed to Booking</button>
+                </li>
+            `;
+        });
+
+        function generateTicketPrice() {
+            return Math.floor(Math.random() * (2000 - 500 + 1)) + 500;
+        }
+
+        function showBooking(totalPrice) {
+            document.getElementById("bookingSection").style.display = "block";
+            document.getElementById("totalAmount").innerText = `Total Amount: ₹${totalPrice}`;
+        }
+
+        document.getElementById("payment").addEventListener("change", function() {
+            let selectedPayment = this.value;
+            document.getElementById("cardDetails").style.display = selectedPayment.includes("Card") ? "block" : "none";
+            document.getElementById("upiDetails").style.display = selectedPayment === "UPI" ? "block" : "none";
+            document.getElementById("netBankingDetails").style.display = selectedPayment === "Net Banking" ? "block" : "none";
+        });
+
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("bookingMessage").innerText = "Booking successful! Your bus ticket has been confirmed.";
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travelling website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+        <body>
+            <div class="navimg">
+                <nav class="navbar">
+                    <div class="left">
+                        <img src="logo.png" alt="logo...." class="im">
+                        <input type="search" placeholder="search">
+                        <button class="but"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="right">
+                        <ul class="iteams">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="item.html">ITEAMS</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="facility">
+                <ul class="facility">
+                    <li><a href="flight.html">FLIGHT   <i class="fa-solid fa-plane"></i>  </a></i></li>
+                    <li><a href="cab.html">CABS    <i class="fa-solid fa-taxi"></i>   </a></li>
+                    <li><a href="bus.html">BUSES    <i class="fa-solid fa-bus"></i>   </a></li>
+                    <li><a href="train.html">TRAIN   <i class="fa-solid fa-train-tram"></i></a></li>
+                    <li><a href="homstay.html">HOME STAY <i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="villa.html">VILLAS  <i class="fa-solid fa-bed"></i></a></li>
+                    <li><a href="hotel.html">HOTELS  <i class="fa-solid fa-hotel"></i></a></li>
+                    <li><a href="holidays.html">HOLIDAY PACKAGE  <i class="fa-solid fa-gift"></i></a></li>
+                </ul>
+            </div>
+
+    <!-- Cab Booking Form -->
+    <section class="cab-booking">
+        <p class="para">Book Your Cab</p>
+        <form id="cabBookingForm">
+            <label for="pickupCity">Pickup Location:</label>
+            <select id="pickupCity" required>
+                <option value="">Select City</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+            </select>
+
+            <label for="dropCity">Drop-off Location:</label>
+            <select id="dropCity" required>
+                <option value="">Select City</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+            </select>
+
+            <label for="travelDate">Travel Date:</label>
+            <input type="date" id="travelDate" required>
+
+            <label for="travelTime">Travel Time:</label>
+            <input type="time" id="travelTime" required>
+
+            <label for="cabType">Cab Type:</label>
+            <select id="cabType" required>
+                <option value="">Select Cab Type</option>
+                <option value="Sedan">Sedan - ₹12/km</option>
+                <option value="SUV">SUV - ₹15/km</option>
+                <option value="Hatchback">Hatchback - ₹10/km</option>
+                <option value="Luxury">Luxury - ₹20/km</option>
+            </select>
+
+            <button type="button" onclick="calculateFare()">Calculate Fare</button>
+
+            <p id="estimatedFare"></p>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" required onchange="showPaymentFields()">
+                <option value="">Select Payment Method</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+                <option value="UPI">UPI</option>
+                <option value="Net Banking">Net Banking</option>
+            </select>
+
+            <!-- Credit/Debit Card Payment Section -->
+            <div id="cardDetails" style="display: none;">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" placeholder="Enter Card Number">
+
+                <label for="cardExpiry">Expiry Date:</label>
+                <input type="month" id="cardExpiry">
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" placeholder="123">
+            </div>
+
+            <!-- UPI Payment Section -->
+            <div id="upiDetails" style="display: none;">
+                <label for="upiID">UPI ID:</label>
+                <input type="text" id="upiID" placeholder="example@upi">
+            </div>
+
+            <!-- Net Banking Payment Section -->
+            <div id="netBankingDetails" style="display: none;">
+                <label for="bankName">Select Bank:</label>
+                <select id="bankName">
+                    <option value="">Choose Bank</option>
+                    <option value="SBI">State Bank of India</option>
+                    <option value="HDFC">HDFC Bank</option>
+                    <option value="ICICI">ICICI Bank</option>
+                    <option value="Axis">Axis Bank</option>
+                </select>
+            </div>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+        <p id="bookingMessage"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Travel Explorer. Discover Your Next Adventure!</p>
+    </footer>
+
+    <script>
+        function calculateFare() {
+            const pickup = document.getElementById("pickupCity").value;
+            const drop = document.getElementById("dropCity").value;
+            const cabType = document.getElementById("cabType").value;
+
+            if (!pickup || !drop || !cabType) {
+                alert("Please select all fields to calculate fare.");
+                return;
+            }
+
+            const distance = Math.floor(Math.random() * (50 - 10 + 1)) + 10; // Random distance between 10km - 50km
+            let ratePerKm = { "Sedan": 12, "SUV": 15, "Hatchback": 10, "Luxury": 20 }[cabType];
+
+            const fare = distance * ratePerKm;
+            document.getElementById("estimatedFare").innerText = `Estimated Fare: ₹${fare} (Distance: ${distance} km)`;
+        }
+
+        function showPaymentFields() {
+            let paymentMethod = document.getElementById("payment").value;
+            document.getElementById("cardDetails").style.display = paymentMethod.includes("Card") ? "block" : "none";
+            document.getElementById("upiDetails").style.display = paymentMethod === "UPI" ? "block" : "none";
+            document.getElementById("netBankingDetails").style.display = paymentMethod === "Net Banking" ? "block" : "none";
+        }
+
+        document.getElementById("cabBookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const paymentMethod = document.getElementById("payment").value;
+
+            if (!paymentMethod) {
+                alert("Please select a payment method.");
+                return;
+            }
+
+            if (paymentMethod.includes("Card") && (!document.getElementById("cardNumber").value || !document.getElementById("cardExpiry").value || !document.getElementById("cvv").value)) {
+                alert("Please fill all card details.");
+                return;
+            }
+
+            if (paymentMethod === "UPI" && !document.getElementById("upiID").value) {
+                alert("Please enter your UPI ID.");
+                return;
+            }
+
+            if (paymentMethod === "Net Banking" && !document.getElementById("bankName").value) {
+                alert("Please select a bank.");
+                return;
+            }
+
+            document.getElementById("bookingMessage").innerText = "Booking successful! Your cab has been confirmed.";
+        });
+    </script>
+
+</body>
+</html>

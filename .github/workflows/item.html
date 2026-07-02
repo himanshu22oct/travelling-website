@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travelling website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+        <body>
+            <div class="navimg">
+                <nav class="navbar">
+                    <div class="left">
+                        <img src="logo.png" alt="logo...." class="im">
+                        <input type="search" placeholder="search">
+                        <button class="but"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="right">
+                        <ul class="iteams">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="item.html">ITEAMS</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="facility">
+                <ul class="facility">
+                    <li><a href="flight.html">FLIGHT   <i class="fa-solid fa-plane"></i>  </a></i></li>
+                    <li><a href="cab.html">CABS    <i class="fa-solid fa-taxi"></i>   </a></li>
+                    <li><a href="bus.html">BUSES    <i class="fa-solid fa-bus"></i>   </a></li>
+                    <li><a href="train.html">TRAIN   <i class="fa-solid fa-train-tram"></i></a></li>
+                    <li><a href="homstay.html">HOME STAY <i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="villa.html">VILLAS  <i class="fa-solid fa-bed"></i></a></li>
+                    <li><a href="hotel.html">HOTELS  <i class="fa-solid fa-hotel"></i></a></li>
+                    <li><a href="holidays.html">HOLIDAY PACKAGE  <i class="fa-solid fa-gift"></i></a></li>
+                </ul>
+            </div>
+    <section class="items">
+        <p class="para">Essential Travel Items</p>
+        <p>Ensure a hassle-free trip by carrying these must-have travel essentials.</p>
+        <div class="item-container">
+            <div class="item">
+                <img src="backpack.jpg" alt="Travel Backpack">
+                <p class="para">Travel Backpack</p>
+                <p>Lightweight and spacious backpacks for easy packing.</p>
+            </div>
+            <div class="item">
+                <img src="passport.jpg" alt="Passport Holder">
+                <p class="para">Passport Holder</p>
+                <p>Keep your passport and important documents safe.</p>
+            </div>
+            <div class="item">
+                <img src="travel-bottle.jpg" alt="Water Bottle">
+                <p class="para">Reusable Water Bottle</p>
+                <p>Stay hydrated with an eco-friendly water bottle.</p>
+            </div>
+            <div class="item">
+                <img src="powerbank.jpg" alt="Power Bank">
+                <p class="para">Power Bank</p>
+                <p>Charge your devices on the go with a portable power bank.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const items = document.querySelectorAll(".item");
+            items.forEach(item => {
+                item.addEventListener("mouseover", function() {
+                    this.style.transform = "scale(1.1)";
+                    this.style.transition = "0.3s";
+                });
+                item.addEventListener("mouseout", function() {
+                    this.style.transform = "scale(1)";
+                });
+            });
+        });
+    </script>
+
+<footer>
+    <p>&copy; 2025 Travel Explorer. Discover Your Next Adventure!</p>
+    <p>Contact us: support@travelexplorer.com | Phone: +123 456 7890</p>
+</footer>
+</body>
+</html>

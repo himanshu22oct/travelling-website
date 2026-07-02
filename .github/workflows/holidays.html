@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travelling website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flight.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+        <body>
+            <div class="navimg">
+                <nav class="navbar">
+                    <div class="left">
+                        <img src="logo.png" alt="logo...." class="im">
+                        <input type="search" placeholder="search">
+                        <button class="but"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="right">
+                        <ul class="iteams">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="item.html">ITEAMS</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="facility">
+                <ul class="facility">
+                    <li><a href="flight.html">FLIGHT   <i class="fa-solid fa-plane"></i>  </a></i></li>
+                    <li><a href="cab.html">CABS    <i class="fa-solid fa-taxi"></i>   </a></li>
+                    <li><a href="bus.html">BUSES    <i class="fa-solid fa-bus"></i>   </a></li>
+                    <li><a href="train.html">TRAIN   <i class="fa-solid fa-train-tram"></i></a></li>
+                    <li><a href="homstay.html">HOME STAY <i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="villa.html">VILLAS  <i class="fa-solid fa-bed"></i></a></li>
+                    <li><a href="hotel.html">HOTELS  <i class="fa-solid fa-hotel"></i></a></li>
+                    <li><a href="holidays.html">HOLIDAY PACKAGE  <i class="fa-solid fa-gift"></i></a></li>
+                </ul>
+            </div>
+
+    <!-- Holiday Listings -->
+    <section class="holiday-listings">
+        <p class="para">🌍 Explore Our 7-Day Holiday Packages</p>
+        <div class="holiday-container" id="holidayContainer"></div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="special-offers">
+        <p class="para">🔥 Special Offers & Discounts</p>
+        <div class="offer-container">
+            <div class="offer-card">
+                <h3>Summer Special: Goa Beach Package</h3>
+                <p>Get 20% off on all Goa packages. Limited Time Offer!</p>
+            </div>
+            <div class="offer-card">
+                <h3>Early Bird Discount</h3>
+                <p>Book before 30th June and get 15% off on all mountain destinations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section class="holiday-booking">
+        <p class="para">📅 Book Your Holiday</p>
+        <form id="bookingForm">
+            <label for="selectedHoliday">Selected Package:</label>
+            <input type="text" id="selectedHoliday" readonly>
+
+            <label for="checkInDate">Start Date:</label>
+            <input type="date" id="checkInDate" required>
+
+            <label for="guests">Number of People:</label>
+            <input type="number" id="guests" min="1" value="1" required>
+
+            <button type="button" onclick="calculateTotal()">Calculate Price</button>
+            <p id="totalPrice"></p>
+
+            <label for="payment">Payment Method:</label>
+            <select id="payment" required onchange="showPaymentFields()">
+                <option value="">Select Payment Method</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+                <option value="UPI">UPI</option>
+                <option value="Net Banking">Net Banking</option>
+                <option value="PayPal">PayPal</option>
+                <option value="Wallet">Digital Wallet</option>
+            </select>
+
+            <div id="paymentDetails"></div>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+        <p id="bookingMessage"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Travel Explorer. Your Journey, Our Priority!</p>
+    </footer>
+
+    <script src="scripthp.js"></script>
+
+</body>
+</html>

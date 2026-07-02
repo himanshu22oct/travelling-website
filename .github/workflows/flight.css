@@ -1,0 +1,1468 @@
+.navimg{
+    background-image: url(navbar\ image.jpg);
+    min-height: 200px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+nav.navbar{
+    display: flex;
+    box-shadow: 3px 3px 9px rgba(0,0,0,0.1)
+}
+.im{
+    height: 60px;
+    margin: auto;
+    margin-left: 13px;
+    border-radius: 40px;
+    width: auto;
+}
+.left{
+    display: flex;
+}
+input[type="search"]{
+    border-radius: 20px;
+    text-align: center;
+    height: 25px;
+    width: 300px;
+    margin-left: 200px;
+    margin-top: 22px;
+}
+button.but{
+    height: 25px;
+    margin-top: 22px;
+    border-radius: 20px;
+    margin-left: 2px;
+    width: 45px;
+}
+.right{
+    width: 166vh;
+    padding-left: 60px;
+}
+ul.iteams{
+    margin-left: 200px;
+    list-style: none;
+    display: flex;
+}
+li{
+  
+    padding: 9px;
+}
+a{
+    color: brown;
+}
+a:hover{
+    color: black;
+}
+button.but:hover{
+    height: 30px;
+    margin-top: 22px;
+    border-radius: 20px;
+    margin-left: 2px;
+    width: 45px;
+}
+input[type="search"]:hover{
+    border-radius: 20px;
+    text-align: center;
+    height: 30px;
+    width: 300px;
+    margin-left: 200px;
+    margin-top: 22px;
+}
+
+
+ul.facility{
+    list-style: none;
+    display: flex;
+}
+.facility{
+    justify-content: space-evenly;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+    border-radius: 40px;
+    height: 60px;
+    align-items: center;
+}
+.para{
+    border-radius: 20px;
+    text-align: center;
+    font-size: xx-large;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+}
+.continents{
+    background-image: url(background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+    position: relative;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 300px;
+    align-items: center;
+    overflow: scroll;
+}
+
+.continents::-webkit-scrollbar{
+    width: 0px;
+}
+img{
+    box-shadow: 2px 2px 15px 3px rgba(0,0,0,0.34);
+    height:200px ;
+    width: 400px;
+    border-radius: 20px;
+
+}
+.li{
+    text-align: center;
+    line-height: 110px;
+    min-width: 500px;
+    min-height: 110px;
+    overflow: hidden;
+    justify-content: center;
+}
+.activities{
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.1);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: scroll;
+    height: 300px;
+    align-items: center;
+}
+.activities::-webkit-scrollbar{
+    width: 0px;
+}
+.activity{
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.1);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    height: 500px;
+    align-items: center;
+}
+.container {
+    max-width: 479px;
+    width: 407px;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.tab-button{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.tab{
+    width:50% ;
+    padding: 10px;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.tab.active{
+    background-color: black;
+    color: white;
+}
+.tab-contant{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+textarea{
+    width:100% ;
+    padding:10px ;
+    display: flex;
+    resize: none;
+    border-radius:1px solid #ccc ;
+    height: 100px;
+}
+button{
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover{
+    background-color: #0b7dda;
+}
+.tab-buttons {
+    display: flex
+;
+}
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* Flight Booking Form */
+.flight-booking {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.flight-booking:hover {
+    transform: scale(1.02);
+}
+
+.para {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.flight-booking form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flight-booking label {
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.flight-booking select,
+.flight-booking input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.flight-booking select:focus,
+.flight-booking input:focus {
+    border-color: black;
+    outline: none;
+}
+
+/* Buttons */
+.flight-booking button {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.flight-booking button:hover {
+    background-color: #0056b3;
+}
+
+/* Estimated Fare */
+#estimatedFlightFare {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: green;
+}
+
+/* Payment Section */
+.payment-section {
+    display: none;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.payment-section label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.payment-section input,
+.payment-section select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.payment-section input:focus,
+.payment-section select:focus {
+    border-color: black;
+    outline: none;
+}
+
+/* Booking Confirmation */
+#bookingMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .flight-booking {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Cab Booking Form */
+.cab-booking {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.cab-booking:hover {
+    transform: scale(1.02);
+}
+
+.para {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.cab-booking form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cab-booking label {
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.cab-booking select,
+.cab-booking input {
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.cab-booking select:focus,
+.cab-booking input:focus {
+    border-color: black;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Buttons */
+.cab-booking button {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cab-booking button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estimated Fare */
+#estimatedFare {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: green;
+}
+
+/* Payment Section */
+.payment-section {
+    display: none;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.payment-section label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.payment-section input,
+.payment-section select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.payment-section input:focus,
+.payment-section select:focus {
+    border-color: black;
+    outline: none;
+}
+
+/* Booking Confirmation */
+#bookingMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .cab-booking {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+}
+
+/* Train Booking Form */
+.train-booking {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.train-booking:hover {
+    transform: scale(1.02);
+}
+
+.para {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.train-booking form {
+    display: flex;
+    flex-direction: column;
+}
+
+.train-booking label {
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.train-booking select,
+.train-booking input {
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.train-booking select:focus,
+.train-booking input:focus {
+    border-color: black;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Buttons */
+.train-booking button {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.train-booking button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estimated Fare */
+#estimatedTrainFare {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: green;
+}
+
+/* Payment Section */
+.payment-section {
+    display: none;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.payment-section label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.payment-section input,
+.payment-section select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.payment-section input:focus,
+.payment-section select:focus {
+    border-color: black;
+    outline: none;
+}
+
+/* Booking Confirmation */
+#bookingMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .train-booking {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Home Stay Listings */
+.homestay-listings {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.homestay-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.homestay {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.homestay:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.homestay img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.homestay h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.homestay p {
+    font-size: 16px;
+    color: #666;
+}
+
+.homestay button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.homestay button:hover {
+    background-color: #0056b3;
+}
+
+/* Booking Form */
+.homestay-booking {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.homestay-booking:hover {
+    transform: scale(1.02);
+}
+
+.para {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.homestay-booking form {
+    display: flex;
+    flex-direction: column;
+}
+
+.homestay-booking label {
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.homestay-booking select,
+.homestay-booking input {
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.homestay-booking select:focus,
+.homestay-booking input:focus {
+    border-color: black;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Buttons */
+.homestay-booking button {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.homestay-booking button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estimated Fare */
+#totalPrice {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: green;
+}
+
+/* Payment Section */
+#paymentDetails {
+    display: none;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+#paymentDetails label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#paymentDetails input,
+#paymentDetails select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#paymentDetails input:focus,
+#paymentDetails select:focus {
+    border-color: black;
+    outline: none;
+}
+
+/* Booking Confirmation */
+#bookingMessage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .homestay-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .homestay-booking {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+
+/* Hotel Listings */
+.hotel-listings {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.hotel-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hotel {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hotel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hotel img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.hotel h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.hotel p {
+    font-size: 16px;
+    color: #666;
+}
+
+.hotel button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hotel button:hover {
+    background-color: #0056b3;
+}
+
+/* Hotel Modal Popup */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.modal-content h2 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: #666;
+}
+
+.modal-content button {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Sidebar Hotel Slider */
+.hotel-slider {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    overflow-y: auto;
+    height: 400px;
+}
+
+.slider-item {
+    background: white;
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.slider-item:hover {
+    transform: scale(1.05);
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Booking Form */
+.hotel-booking {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.para {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.hotel-booking form {
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-booking label {
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 16px;
+}
+
+.hotel-booking select,
+.hotel-booking input {
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.hotel-booking select:focus,
+.hotel-booking input:focus {
+    border-color: black;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hotel-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .hotel-booking {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar .right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hotel-slider {
+        width: 100%;
+        position: relative;
+        border-radius: 10px;
+        margin-top: 20px;
+        height: auto;
+    }
+}
+
+
+
+
+/* villas */
+
+
+
+
+/* Scrollable Villa Listings */
+
+
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.villa-listings, .booking-form {
+    width: 80%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #34495e;
+}
+
+#villaContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.villa {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.villa:hover {
+    transform: scale(1.05);
+}
+
+.villa img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+button {
+    background: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+section.villa-booking {
+    margin-left: 460px;
+    width: 318px;
+}
+
+
+
+
+
+/* holidays */
+
+
+
+/* General Styles */
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.left input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.but {
+    /* background: white; */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.right .items {
+    list-style: none;
+    display: flex;
+}
+
+.right .items li {
+    margin: 0 10px;
+}
+
+.right .items a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.right .items a:hover {
+    background: white;
+    color: #007bff;
+}
+
+/* Holiday Listings */
+.holiday-listings {
+    text-align: center;
+    padding: 30px;
+}
+
+.holiday-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Individual Holiday Card */
+.holiday {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.holiday:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.holiday img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.holiday h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+.holiday p {
+    font-size: 16px;
+    color: #666;
+}
+
+.holiday ul {
+    list-style: none;
+    padding: 0;
+}
+
+.holiday ul li {
+    background: #f1f1f1;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.holiday button {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.holiday button:hover {
+    background-color: black;
+}
+
+/* Special Offers */
+.special-offers {
+    text-align: center;
+    padding: 30px;
+    background: #ffeb3b;
+}
+
+.offer-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.offer-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.offer-card:hover {
+    transform: scale(1.05);
+}
+
+/* Booking Form */
+.holiday-booking {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.holiday-booking label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.holiday-booking input,
+.holiday-booking select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.holiday-booking button {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.holiday-booking button:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    background: black;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.left input {
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+
+
+
+.but {
+    /* background: white; */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
